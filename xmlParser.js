@@ -1,6 +1,6 @@
 function XMLParser() {
     function parseFromString(xmlText) {
-        xmlText = xmlText.replace(/\s{2,}/g, '').replace(/\\t\\n\\r/g, '').replace(/>/g, '>\n');
+        xmlText = xmlText.replace(/\s{2,}/g, '').replace(/[\t\n\r]/g, '').replace(/>/g, '>\n');
         var tags = xmlText.split('\n');
         var xml = [];
         
